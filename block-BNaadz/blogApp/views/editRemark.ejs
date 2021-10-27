@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+
+<section>
+    <div class="container">
+        <div>
+            <form class="form" action="/remark/:id/edit/<%= remark.id %>" method="POST">
+                <h3 class="form_heading">Edit Article</h3>
+                <input name="title" type="text" placeholder="Update Remarks" value="<%= remark.title %>" />
+                <input name="author" type="text" placeholder="author" value="<%= remark.author %>" />
+                <div class="">
+                    <button class="btn form_btn" type="submit">Update Remark</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') -%>

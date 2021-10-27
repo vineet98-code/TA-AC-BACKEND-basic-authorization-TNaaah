@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+<section>
+    <div class="container">
+        <form class="form" method="POST" action="/articles">
+          <fieldset>
+            <input name="title" placeholder="title" type="text" />
+            <textarea name="description" type = "text" placeholder="Enter description" cols="20" rows="10"></textarea>
+            <input name="tags" placeholder="Tags" type="text" />
+            
+            <div>
+              <button class="btn form_btn" type="submit">Add Articles</button>
+            </div>
+          </fieldset>
+        </form>
+    </div>
+  </section>
+    
+<%- include('partials/footer') -%>
