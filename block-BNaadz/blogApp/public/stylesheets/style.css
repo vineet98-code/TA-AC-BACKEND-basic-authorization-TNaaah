@@ -1,0 +1,475 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom styles */
+
+body {
+	background-color: rgb(202, 214, 30);
+	color: rgb(0, 0, 0);
+}
+
+a {
+	color: #c8cbcc;
+	text-decoration: none;
+}
+.container {
+	max-width: 1820px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-25 {
+	flex: 0 1 25%;
+}
+.flex-30 {
+	flex: 0 1 30%;
+}
+.flex-70 {
+	flex: 0 1 70%;
+}
+.flex-28 {
+	flex: 0 1 28%;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+
+/* header */
+
+.logo {
+	font-size: 3rem;
+	font-weight: bold;
+	color: #ffffff;
+}
+.btn {
+	background-color: rgb(120, 148, 224);
+	font-size: 1.3rem;
+	color: #ffffff;
+	border: 0;
+	outline: 0;
+	padding: 0.5rem 1.5rem;
+	font-weight: bold;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.header {
+	padding: 0.6rem;
+}
+.header_section {
+	background-color: #bbbe0a;
+	border-bottom: 1px solid rgb(192, 192, 192);
+}
+.image {
+	width: 32%;
+	margin-top: 2rem;
+}
+.heading {
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 2rem;
+	font-weight: bold;
+}
+.about_heading {
+	font-size: 1.8rem;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 2rem;
+}
+.about_p {
+	font-size: 1.3rem;
+	line-height: 1.5;
+	margin-top: 2rem;
+}
+.footer_section {
+	background-color: #e25f6e;
+	text-align: center;
+	padding: 2rem;
+	font-size: 1.3rem;
+	color: rgba(255, 255, 255, 0.836);
+	margin-top: 3rem;
+}
+
+/* Form */
+form {
+	width: 40%;
+}
+.form {
+	background-color: #e6e6e6;
+	text-align: center;
+	padding: 2rem;
+	margin: 40px auto;
+	box-shadow: -2px -2px 6px gray, 2px 2px 6px gray;
+}
+.form input,
+.form textarea {
+	width: 95%;
+	height: 45px;
+	padding: 0 1rem;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	outline: 0;
+	border: 1px solid rgba(128, 128, 128, 0.534);
+}
+.form_heading {
+	font-size: 1.5rem;
+	/* color: purple; */
+}
+.form_btn {
+	margin-top: 3rem;
+	background-color: #e9c939;
+}
+.form input:focus,
+.form textarea:focus {
+	border: 2px solid #a9b6bb;
+}
+.form textarea {
+	height: 100px;
+	padding: 1rem;
+}
+.date__form {
+	width: 80%;
+}
+
+/* Aside */
+.aside {
+	/* box-shadow: -2px -2px 6px gray, 2px 2px 6px gray; */
+	border: 1px solid rgb(85, 85, 85);
+	padding: 1rem;
+}
+.categories_heading {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-top: 1rem;
+	font-weight: bold;
+}
+
+/* * Events */
+*/ .events_section {
+	margin-top: 2rem;
+	/* border: 1px solid red; */
+}
+.main_section .flex {
+	align-items: unset;
+}
+.event_single {
+	border: 1px solid rgb(85, 85, 85);
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+}
+.title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: crimson;
+}
+.event_list {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: bold;
+	margin: 4rem 0;
+}
+.summary {
+	line-height: 1.5;
+	font-size: 1.2rem;
+	margin-top: 1rem;
+}
+.view_event_btn {
+	background-color: #3f6daa;
+	margin-top: 1rem;
+}
+.host {
+	font-size: 1.8rem;
+	color: teal;
+	margin-top: 1rem;
+	font-weight: bold;
+}
+.summary_new {
+	font-size: 1.3rem;
+}
+.start_date,
+.end_date {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+.category {
+	font-size: 1.6rem;
+	color: #ebd72a;
+	margin-top: 1rem;
+}
+.location {
+	font-size: 1.2rem;
+	margin-top: 1rem;
+}
+.edit_event_btn {
+	background-color: #f099fb;
+}
+.delete_event_btn,
+.edit_event_btn {
+	margin-top: 1rem;
+}
+.delete_event_btn {
+	margin-left: 1rem;
+}
+.likes,
+.dislikes {
+	font-size: 2rem;
+	color: white;
+	padding: 0.5rem;
+}
+.likes:hover,
+.dislikes:hover {
+	background-color: #6c2f88;
+}
+.events_section .flex {
+	justify-content: unset;
+}
+.likes {
+	background-color: #3494e6;
+}
+.dislikes {
+	background-color: #012e68;
+	margin-left: 1rem;
+}
+.likes_value {
+	margin-left: 0.5rem;
+}
+.dislikes_value {
+	margin-left: 2rem;
+}
+.likes_value,
+.dislikes_value {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+.likes_div {
+	margin-top: 1rem;
+	text-align: center;
+	margin: 0 auto;
+}
+.form_section {
+	width: 40%;
+	margin-top: 1rem;
+	margin: 0 auto;
+}
+.form_section input,
+.form_section textarea {
+	display: block;
+	width: 90%;
+	font-size: 1.2rem;
+	padding: 0rem 1.5rem;
+	margin-top: 1rem;
+	border: 1px solid rgba(128, 128, 128, 0.534);
+	outline: 0;
+}
+.form_section textarea {
+	height: 50px;
+	padding: 1rem 1.5rem;
+}
+.form_section input {
+	height: 40px;
+}
+.remark_btn {
+	margin-top: 1rem;
+	background-color: teal;
+}
+.remark_form textarea:focus,
+.remark_form input:focus {
+	border: 1px solid #52a74b;
+}
+.remark_section {
+	box-shadow: -2px -2px 6px gray, 2px 2px 6px gray;
+	margin: 1rem;
+	padding: 1rem;
+}
+.text {
+	font-size: 1.3rem;
+}
+.remark_section_total .flex {
+	justify-content: unset;
+}
+.author {
+	font-size: 1.2rem;
+	color: crimson;
+	margin-top: 1rem;
+}
+.edit_remark_btn {
+	background-color: darkmagenta;
+}
+.delete_remark_btn {
+	background-color: darkred;
+}
+.edit_remark_btn,
+.delete_remark_btn {
+	padding: 0.5rem;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.line {
+	border: 1px solid rgba(128, 128, 128, 0.486);
+	width: 80%;
+	margin: 1rem auto;
+}
+.category_btn {
+	background-color: #2a293e;
+	margin: 1rem auto;
+}
+.category_heading_new {
+	color: crimson;
+}
+.location_btn {
+	background-color: #0077f7;
+}
+main {
+	padding: 2rem;
+}
+.ascend_btn {
+	background-color: #00b7ff;
+	margin: 1rem;
+}
+.descend_btn {
+	background-color: #ec6ead;
+	margin: 1rem;
+}
+.error {
+	color: red;
+	font-size: 30px;
+	margin-right: 260px;
+}
