@@ -1,0 +1,118 @@
+<%- include('partials/header') -%>
+
+<section class="main_section">
+    <div class="container">
+      <h2 class="event_list">Articles Details</h2>
+      <section class="events_section flex-70">
+        <div>
+            <div>
+                <h2 class="title">
+                    <%= `${article.title}` %>
+                </h2>
+                <h2 class="title">
+                    <%= `${article.author.name}` %>
+                </h2>
+
+                <h3 class="summary summary_new">
+                    <%= `${article.description}` %>
+                </h3>
+                <a href="/articles/<%= article.id %>/edit ">
+                    <button class="btn edit_event_btn">
+                        Edit Article
+                    </button>
+                </a>
+                <a href="/articles/<%= article.id %>/delete ">
+                    <button class="btn delete_event_btn">
+                        Delete Article
+                    </button>
+                </a>
+
+                <div class="likes_div flex ">
+                    <div>
+                        <p class="likes_value">
+                            <%= article.likes %>
+                        </p>
+                        <a href="/articles/<%= article.id %>/likes ">
+                            <i class="far fa-thumbs-up likes"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <p class="dislikes_value">
+                            <%= article.dislikes %>
+                        </p>
+                        <a href="/articles/<%= article.id %>/dislikes ">
+                            <i class="far fa-thumbs-down dislikes"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+        <div class="form_section">
+            <form class="remark_form" action="/articles/<%= article.id %>/remark" method="POST">
+                <input name="title" type="text" placeholder="Enter Remarks" />
+                <input name="author" type="text"  placeholder="Author name" />
+                <button class="btn remark_btn" type="submit"> Add Remark </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Remarks Edit and delete form -->
+<section class="remark_section_total">
+  <div class="container">
+      <div class=" flex wrap">
+        <% article.remark.forEach(remark => { %>
+          <div class="remark_section flex-28">
+              <div class="remarks_div">
+                  <div>
+                      <h2 class="text">
+                          <%= remark.title %>
+                      </h2>
+                      <h3 class="author">
+                          <%= `Author : ${remark.author}` %>
+                      </h3>
+                      <a href="/remarks/<%= remark.id %>/edit ">
+                          <button class="btn edit_remark_btn">
+                              Edit
+                          </button>
+                      </a>
+                      <a href="/remarks/<%= remark.id %>/delete ">
+                          <button class="btn delete_remark_btn">
+                              Delete
+                          </button>
+                      </a>
+                  </div>
+                  <div class="likes_div flex">
+                      <div>
+                          <p class="likes_value">
+                              <%= remark.likes %>
+                          </p>
+                          <a href="/remarks/<%= remark.id %>/likes ">
+                              <i class="far fa-thumbs-up likes">
+                              </i>
+                          </a>
+                      </div>
+                      <div>
+                          <p class="dislikes_value">
+                              <%= remark.dislikes %>
+                          </p>
+                          <a href="/remarks/<%= remark.id  %>/dislikes ">
+                              <i class="far fa-thumbs-down dislikes">
+                              </i>
+                          </a>
+                        </div>
+                    </div>
+              </div>
+          </div>
+          <% }) %>
+        </div>
+  </div>
+</section>
+
+<%- include('partials/footer') -%>

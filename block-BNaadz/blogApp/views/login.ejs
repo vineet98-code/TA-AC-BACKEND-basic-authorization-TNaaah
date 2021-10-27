@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+    
+<div class="container">
+        <form class="form" method="POST" action="/users/login">
+            <h3>Login</h3>
+            <% if(error) { %>
+               <p class="error"><%= error %></p>
+            <% } %>
+          <fieldset>
+            <input name="email" type="text" placeholder="Email" />
+            <input name="password" type="text" placeholder="Password" />
+            <div>
+              <button class="btn form_btn" type="submit">Login</button>
+            </div>
+          </fieldset>
+        </form>
+    </div>
+     
+<%- include('partials/footer') -%>

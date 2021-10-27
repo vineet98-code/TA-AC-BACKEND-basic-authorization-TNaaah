@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+
+<section class="main_section">
+    <div class="container">
+      <h2 class="event_list">List of Users</h2>
+        <section class="events_section flex-70">
+          <div>
+            <% users.forEach(user=> { %>
+            <div class="event_single">
+              <h2 class="title"><%= user.name %></h2>
+              <h3 class="summary"><%= user.email %></h3>
+              <a href="/users/<%= user.id  %> ">
+                <button class="btn view_event_btn">View User</button>
+              </a>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+    </div>
+  </section>
+
+<%- include('partials/footer') -%>
