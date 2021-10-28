@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/c6f9fe3736.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <header class="header_section">
+    <div class="container">
+      <div class="header flex">
+        <a href="/">
+          <strong class="logo"> HOME </strong>
+        </a>
+        
+        <% if(user) { %>
+          <nav>
+            <a href=""><%= user.name %></a>
+            <a href="/articles">
+              <button class="btn">My Articles</button>
+            </a>
+            <a href="/articles/new">
+              <button class="btn">Add Articles</button>
+            </a>
+            
+            <a href="/users/logout">
+              <button class="btn">Logout</button>
+            </a>
+          </nav>
+        <% } else { %>
+
+          <nav>
+            <a href="/users/login">
+              <button class="btn">Admin Login</button>
+            </a>
+            
+            <a href="/users/register">
+              <button class="btn">User login</button>
+            </a>
+          </nav>
+        <% } %>
+      </div>
+    </div>
+  </header>
+  </body>
+</html>

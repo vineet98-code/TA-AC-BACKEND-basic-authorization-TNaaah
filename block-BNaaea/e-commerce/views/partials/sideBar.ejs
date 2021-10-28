@@ -1,0 +1,33 @@
+<aside class="aside flex-25">
+	<h3 class="categories_heading">Search By</h3>
+
+	<div class="line"></div>
+	<h3 class="categories_heading">Category</h3>
+
+	<% allCategories.forEach(category=> { %>
+	<a href="/category/<%= category %>">
+		<button class="btn category_btn"><%= category %></button>
+	</a>
+	<% }) %>
+
+	<div class="line"></div>
+	<h3 class="categories_heading">Location</h3>
+
+	<% allLocations.forEach(location=> { %>
+	<a href="/location/<%= location %>">
+		<button class="btn category_btn location_btn"><%= location %></button>
+	</a>
+	<% }) %>
+
+	<!-- <div class="line"></div>
+
+	<h3 class="categories_heading">Sorting Date..</h3>
+	<div>
+		<a href="/date/ascend">
+			<button class="btn ascend_btn">Ascend</button>
+		</a>
+		<a href="/date/descend">
+			<button class="btn descend_btn">Descend</button>
+		</a>
+	</div> -->
+</aside>
